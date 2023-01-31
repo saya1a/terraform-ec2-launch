@@ -3,9 +3,17 @@ variable "ec2_count" {
 }
 
 variable "ami_id" {
-  default = "ami-06878d265978313ca"
+  default = " "
 }
-
+/*
 variable "instance_type" {
   default = "t2.micro"
+} 
+*/
+
+# for different instance types
+
+variable "instance_type" {
+  type = list(string)
+  default = ["t2.micro", "t2.small", "t2.medium"]
 }
